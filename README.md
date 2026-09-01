@@ -1,61 +1,32 @@
 # PageSpeed Insights Chrome Extension
 
-This Chrome extension allows users to quickly analyze web pages using Google's PageSpeed Insights API directly from their browser.
+A Chrome extension that runs Google's PageSpeed Insights API against the current tab and surfaces performance, accessibility, best-practices, and SEO scores — without leaving the browser.
+
+> 🕰️ **Note:** Built while learning TypeScript and browser-extension development.
 
 ## Features
+- One-click analysis of the current tab's URL
+- Performance, accessibility, best-practices, and SEO scores at a glance
+- Detailed metrics and improvement suggestions
+- Link to the full PageSpeed Insights report
 
-- Analyze the current tab's URL with PageSpeed Insights
-- Display performance, accessibility, best practices, and SEO scores
-- Show detailed metrics and suggestions for improvement
-- Option to view the full PageSpeed Insights report
+## Tech stack
+`TypeScript` `Chrome Extension APIs` `Google PageSpeed Insights API`
 
 ## Setup
-
-1. Clone this repository to your local machine.
-
-2. Install dependencies:
-   ```
-   npm install
-   ```
-
-3. Set up your API key:
-   - Rename `src/config.example.ts` to `src/config.ts`
-   - Replace `YOUR_API_KEY_HERE` in `config.ts` with your actual Google PageSpeed Insights API key
-
-4. Build the extension:
-   ```
-   npm run build
-   ```
-
-5. Load the extension in Chrome:
-   - Open Chrome and navigate to `chrome://extensions`
-   - Enable "Developer mode" in the top right corner
-   - Click "Load unpacked" and select the `dist` folder in your project directory
+```bash
+git clone https://github.com/<username>/website-performance-analyzer.git
+cd website-performance-analyzer
+npm install
+```
+1. Rename `src/config.example.ts` → `src/config.ts` and add your own PageSpeed Insights API key
+2. `npm run build`
+3. In Chrome, go to `chrome://extensions`, enable Developer mode, click "Load unpacked," and select the `dist` folder
 
 ## Usage
-
-1. Click on the extension icon in your Chrome toolbar.
-2. Click the "Analyze" button to run PageSpeed Insights on the current tab.
-3. View the results, including scores, metrics, and suggestions for improvement.
-4. Use the "View Full Report" button to see the complete PageSpeed Insights report.
-5. Click "Reanalyze" to run the analysis again.
-
-## Development
-
-- To watch for changes and rebuild automatically:
-  ```
-  npm run watch
-  ```
-
-- To build for production:
-  ```
-  npm run build
-  ```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. Click the extension icon
+2. Click "Analyze" to run PageSpeed Insights on the current tab
+3. Review scores and suggestions, or click "View Full Report" for details
 
 ## License
-
-[MIT License](LICENSE)
+MIT
